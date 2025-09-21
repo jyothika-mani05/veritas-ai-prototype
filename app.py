@@ -6,7 +6,7 @@ import os
 st.set_page_config(layout="wide", page_title="Veritas AI")
 
 # Get API key from the environment variable set in the launch cell
-API_KEY = 'AIzaSyBxnR0DuMIe32yOvCW4hCdvNCfFoKcubNk'
+API_KEY = os.getenv("GCP_API_KEY")
 
 # Configure the Generative AI client
 if API_KEY:
