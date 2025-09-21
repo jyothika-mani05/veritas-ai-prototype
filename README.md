@@ -25,7 +25,7 @@ Veritas AI tackles this problem head-on by offering:
 ## Live Demo
 
 Experience Veritas AI live!
-**[https://your-app-name.streamlit.app](https://your-app-name.streamlit.app)** ## Getting Started (Local Development)
+**[](https://veritas-ai-prototype.streamlit.app)** ## Getting Started (Local Development)
 
 To run Veritas AI on your local machine:
 
@@ -75,4 +75,4 @@ To run Veritas AI on your local machine:
 * Kancharla Shresta Reddy 
 * Chikkala Greeshma
 * Pulukuri Sharon
-* 
+
