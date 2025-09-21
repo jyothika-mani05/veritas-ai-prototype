@@ -11,7 +11,7 @@ try:
     API_KEY = st.secrets["GCP_API_KEY"]
     genai.configure(api_key=API_KEY)
     # Use the correct, stable model name
-    model = genai.GenerativeModel('gemini-1.0-pro') # Corrected model name
+    model = genai.GenerativeModel('gemini-2.5-pro') # Corrected model name
 except KeyError:
     API_KEY = None
     model = None
