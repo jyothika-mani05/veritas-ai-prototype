@@ -1,12 +1,12 @@
 import streamlit as st
 import google.generativeai as genai
 import os
-
+from google.colab import userdata
 # --- Configuration ---
 st.set_page_config(layout="wide", page_title="Veritas AI")
 
 # Get API key from the environment variable set in the launch cell
-API_KEY = os.getenv("GCP_API_KEY")
+API_KEY = "AIzaSyBxnR0DuMie32y0vCw4hCdvNCfFoKcubNk"
 
 # Configure the Generative AI client
 if API_KEY:
