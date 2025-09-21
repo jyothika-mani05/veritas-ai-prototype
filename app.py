@@ -5,14 +5,21 @@ import os
 st.set_page_config(layout="wide", page_title="Veritas AI")
 
 # Get API key from the environment variable set in the launch cell
-API_KEY = "AIzaSyBxnR0DuMie32y0vCw4hCdvNCfFoKcubNk"
 
 # Configure the Generative AI client
-if API_KEY:
+try:
+    API_KEY = st.secrets["GCP_API_KEY"]
     genai.configure(api_key=API_KEY)
-    model = genai.GenerativeModel('gemini-2.5-pro')
-else:
+    # Use the correct, stable model name
+    model = genai.GenerativeModel('gemini-1.0-pro') # Corrected model name
+except KeyError:
+    API_KEY = None
     model = None
+    st.error("Google Cloud API Key not found in Streamlit Secrets. Please configure 'GCP_API_KEY'.")
+except Exception as e:
+    API_KEY = None
+    model = None
+    st.error(f"An error occurred configuring Gemini AI: {e}. Please check your API key.")
 
 # --- Function to call Gemini AI ---
 def get_veritas_analysis(content):
